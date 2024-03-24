@@ -44,10 +44,32 @@ int sumOfItsAllFactor(int n){
     }
     return sum;
 }
+
+// seive 
+const int N = 100;
+bool seive[N+1];
+void createSieve(){
+    for(int i = 2; i <= N; i++){
+        seive[i] = true;
+    }
+
+    for(int i = 2; i <= N; i++){
+        if(seive[i]){
+            for(int j = i*i; j <= N; j += i){
+                seive[j] = false;
+            }
+        }
+    }
+    for(int i = 2; i <= N; i++){
+        if(seive[i]) cout << i << endl;
+    }
+}
 int main(){
 
-    cout << checkPrimeOrderOfN(17) << endl;
-    cout << checkPrimeOrdrOfSQRT(17) << endl;
-    cout << sumOfItsAllFactor(5) << endl;
+    // cout << checkPrimeOrderOfN(17) << endl;
+    // cout << checkPrimeOrdrOfSQRT(17) << endl;
+    // cout << sumOfItsAllFactor(5) << endl;
+
+    createSieve();
 
 }
