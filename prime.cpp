@@ -64,12 +64,16 @@ void createSieve(){
         if(seive[i]) cout << i << endl;
     }
 }
+
+// find the kth prime
+
+
 int main(){
 
     // cout << checkPrimeOrderOfN(17) << endl;
     // cout << checkPrimeOrdrOfSQRT(17) << endl;
     // cout << sumOfItsAllFactor(5) << endl;
 
-    createSieve();
+    // createSieve();
 
 }
